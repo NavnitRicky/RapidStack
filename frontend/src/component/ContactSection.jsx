@@ -33,7 +33,7 @@ export default function ContactSection() {
     
     try {
       // Send data to backend
-      const response = await fetch('http://localhost:5000/api/contact', {
+      const response = await fetch('http://localhost:5050/api/contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -329,20 +329,21 @@ export default function ContactSection() {
             <p className="cta-description">
               Join our satisfied clients who've transformed their ideas into successful digital products.
             </p>
-            <div className="cta-buttons">
-              <button 
-                onClick={handleScheduleCall}
-                className="cta-button primary"
-              >
-                Schedule a Call
-              </button>
-              <button 
-                onClick={handleViewProjects}
-                className="cta-button secondary"
-              >
-                View More Projects
-              </button>
-            </div>
+           <div className="cta-buttons">
+  <a href="tel:7667761697" className="cta-button primary">
+    Call Now
+  </a>
+ <a
+  href="https://wa.me/7667761697?text=Hi%2C%20I%20am%20interested%20in%20your%20services."
+  target="_blank"
+  rel="noopener noreferrer"
+  className="cta-button secondary"
+>
+  WhatsApp Me
+</a>
+
+</div>
+
           </div>
         </div>
       </div>

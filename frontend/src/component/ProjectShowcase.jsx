@@ -12,17 +12,18 @@ export default function ProjectShowcase() {
       title: "ECommerce Platform",
       category: "Full-Stack Web Application",
       description: "Complete e-commerce solution with React frontend, Node.js backend, and AWS deployment. Features include user authentication, payment integration, inventory management, and admin dashboard.",
-      technologies: ["React", "Node.js", "MongoDB", "Stripe", "AWS"],
-      image: "https://readdy.ai/api/search-image?query=Modern%20e-commerce%20website%20interface%20on%20laptop%20screen%2C%20clean%20product%20showcase%20layout%2C%20shopping%20cart%20and%20checkout%20flow%2C%20professional%20web%20design%20with%20blue%20and%20white%20color%20scheme&width=600&height=400&seq=ecom1&orientation=landscape",
+      technologies: ["React", "Node.js", "MongoDB", "Razorpay integration", "Hosting"],
+      image: "/images/padhaixpress.jpg",
       results: ["50% faster loading times", "99.9% uptime", "Scalable to 10k+ users"]
     },
     {
       id: 2,
-      title: "TaskFlow Mobile App",
-      category: "Cross-Platform Mobile App",
-      description: "Project management mobile application built with Flutter. Includes real-time collaboration, file sharing, push notifications, and offline functionality with Firebase backend.",
-      technologies: ["Flutter", "Firebase", "Push Notifications", "Offline Sync"],
-      image: "https://readdy.ai/api/search-image?query=Mobile%20project%20management%20app%20interface%20on%20smartphone%2C%20task%20management%20screens%20with%20clean%20UI%2C%20collaborative%20workspace%20design%2C%20modern%20mobile%20app%20with%20purple%20and%20white%20theme&width=600&height=400&seq=mobile1&orientation=landscape",
+      title: "Educational platform ",
+      category: "Full stack Development",
+      description: "Innovience empowers students with industry-ready internships and exciting hackathons to build skills and showcase talent.",
+      technologies: ["Next.js", "React", "Supabase", "Payment integration"],
+      // image: "https://readdy.ai/api/search-image?query=Mobile%20project%20management%20app%20interface%20on%20smartphone%2C%20task%20management%20screens%20with%20clean%20UI%2C%20collaborative%20workspace%20design%2C%20modern%20mobile%20app%20with%20purple%20and%20white%20theme&width=600&height=400&seq=mobile1&orientation=landscape",
+      image: "/images/innovience.jpg",
       results: ["4.8★ App Store rating", "Cross-platform compatibility", "Real-time collaboration"]
     },
     {
@@ -102,6 +103,9 @@ export default function ProjectShowcase() {
                 {/* Example: Add a View Website button for the first project only. Replace with your real URLs as needed. */}
                 {project.id === 1 && (
                   <button className="btn primary" style={{marginTop: '1rem'}} onClick={() => setModalUrl('https://padhaixpress.in')}>View Website</button>
+                )}
+                 {project.id === 2 && (
+                  <button className="btn primary" style={{marginTop: '1rem'}} onClick={() => setModalUrl('https://innovience.in')}>View Website</button>
                 )}
               </div>
             </div>
