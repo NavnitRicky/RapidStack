@@ -1,6 +1,6 @@
 .work-process {
   padding: clamp(4rem, 8vh, 6rem) 2rem;
-  background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+  background: transparent;
   position: relative;
   overflow: hidden;
 }
@@ -12,7 +12,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="circles" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="2" fill="rgba(102,126,234,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23circles)"/></svg>');
+  background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="circles" width="30" height="30" patternUnits="userSpaceOnUse"><circle cx="15" cy="15" r="2" fill="rgba(59,130,246,0.12)"/></pattern></defs><rect width="100" height="100" fill="url(%23circles)"/></svg>');
   opacity: 0.7;
   z-index: 1;
 }
@@ -34,7 +34,7 @@
 .section-header h2 {
   font-size: clamp(2rem, 5vw, 3rem);
   font-weight: 800;
-  color: #333;
+  color: var(--color-slate-100);
   margin-bottom: 1.5rem;
   letter-spacing: -0.02em;
   line-height: 1.2;
@@ -42,7 +42,7 @@
 
 .section-header p {
   font-size: clamp(1rem, 2vw, 1.2rem);
-  color: #666;
+  color: var(--color-slate-300);
   max-width: 700px;
   margin: 0 auto;
   line-height: 1.7;
@@ -70,13 +70,13 @@
 }
 
 .step-content {
-  background: white;
+  background: rgba(15, 23, 42, 0.8);
   padding: clamp(2rem, 4vw, 2.5rem);
   border-radius: 20px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 40px rgba(2, 6, 23, 0.45);
   width: 100%;
   position: relative;
-  border: 2px solid transparent;
+  border: 2px solid rgba(59, 130, 246, 0.2);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
   text-align: center;
 }
@@ -146,13 +146,13 @@
 .step-content h3 {
   font-size: clamp(1.2rem, 2.5vw, 1.4rem);
   font-weight: 700;
-  color: #333;
+  color: var(--color-slate-100);
   margin-bottom: 1rem;
   letter-spacing: -0.01em;
 }
 
 .step-content p {
-  color: #666;
+  color: var(--color-slate-300);
   line-height: 1.6;
   margin-bottom: 1.5rem;
   font-size: clamp(0.9rem, 1.5vw, 1rem);
@@ -169,7 +169,7 @@
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  color: #555;
+  color: var(--color-slate-300);
   font-size: clamp(0.85rem, 1.3vw, 0.9rem);
   line-height: 1.4;
 }
@@ -194,14 +194,14 @@
 .core-values h3 {
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 700;
-  color: #333;
+  color: var(--color-slate-100);
   margin-bottom: 1.5rem;
   letter-spacing: -0.01em;
 }
 
-.core-values > p {
+.core-values>p {
   font-size: clamp(1rem, 2vw, 1.2rem);
-  color: #666;
+  color: var(--color-slate-300);
   max-width: 700px;
   margin: 0 auto clamp(2rem, 4vh, 3rem);
   line-height: 1.7;
@@ -217,12 +217,12 @@
 }
 
 .value-card {
-  background: white;
+  background: rgba(15, 23, 42, 0.8);
   padding: clamp(2rem, 4vw, 3rem);
   border-radius: 20px;
-  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 30px rgba(2, 6, 23, 0.45);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-  border: 1px solid rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(59, 130, 246, 0.2);
   position: relative;
   overflow: hidden;
 }
@@ -257,13 +257,13 @@
 .value-card h4 {
   font-size: clamp(1.1rem, 2vw, 1.3rem);
   font-weight: 600;
-  color: #333;
+  color: var(--color-slate-100);
   margin-bottom: 1rem;
   letter-spacing: -0.01em;
 }
 
 .value-card p {
-  color: #666;
+  color: var(--color-slate-300);
   line-height: 1.6;
   font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
@@ -273,6 +273,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -284,15 +285,15 @@
   .container {
     max-width: 1600px;
   }
-  
+
   .process-steps {
     gap: 2.5rem;
   }
-  
+
   .process-step {
     max-width: 350px;
   }
-  
+
   .values-grid {
     grid-template-columns: repeat(4, 1fr);
   }
@@ -305,7 +306,7 @@
     flex-wrap: nowrap;
     gap: 2rem;
   }
-  
+
   .process-step {
     flex: 1;
     min-width: auto;
@@ -318,12 +319,12 @@
     flex-wrap: wrap;
     gap: 2rem;
   }
-  
+
   .process-step {
     flex: 1 1 calc(50% - 1rem);
     min-width: 280px;
   }
-  
+
   .values-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 2rem;
@@ -335,40 +336,40 @@
   .work-process {
     padding: 3rem 0;
   }
-  
+
   .container {
     padding: 0 1rem;
   }
-  
+
   .section-header {
     margin-bottom: 3rem;
   }
-  
+
   .process-steps {
     flex-direction: column;
     gap: 2rem;
   }
-  
+
   .process-step {
     min-width: 100%;
     max-width: 100%;
   }
-  
+
   .step-content {
     padding: 2rem 1.5rem;
   }
-  
+
   .step-number {
     width: 32px;
     height: 32px;
     font-size: 0.9rem;
   }
-  
+
   .values-grid {
     grid-template-columns: 1fr;
     gap: 1.5rem;
   }
-  
+
   .value-card {
     padding: 2rem 1.5rem;
   }
@@ -378,30 +379,30 @@
   .work-process {
     padding: 2.5rem 0;
   }
-  
+
   .container {
     padding: 0 0.75rem;
   }
-  
+
   .section-header {
     margin-bottom: 2.5rem;
   }
-  
+
   .process-steps {
     gap: 1.5rem;
     margin-bottom: 2.5rem;
   }
-  
+
   .step-content {
     padding: 1.75rem 1.25rem;
   }
-  
+
   .step-number {
     width: 30px;
     height: 30px;
     font-size: 0.85rem;
   }
-  
+
   .value-card {
     padding: 1.75rem 1.25rem;
   }

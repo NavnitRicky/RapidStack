@@ -4,8 +4,8 @@ import './PricingSection.css';
 const pricingPlans = [
   {
     title: 'Basic',
-    price: '₹4,999 +',
-    originalPrice: '₹6,999 +',
+    price: '₹6,999 +',
+    originalPrice: '₹9,999 +',
     features: [
       'Static Website (3 Pages)',
       'Responsive Design',
@@ -22,8 +22,8 @@ const pricingPlans = [
   },
   {
     title: 'Standard',
-    price: '₹9,999 +',
-    originalPrice: '₹13,999 +',
+    price: '₹12,999 +',
+    originalPrice: '₹15,999 +',
     features: [
       'Dynamic Website',
       'Backend Integration',
@@ -39,8 +39,8 @@ const pricingPlans = [
   },
   {
     title: 'Premium',
-    price: '₹14,999 +',
-    originalPrice: '₹19,999 +',
+    price: '₹21,999 +',
+    originalPrice: '₹25,999 +',
     features: [
       'Domain free',
       'Full-stack Web App',

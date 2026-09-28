@@ -1,0 +1,61 @@
+/* TechBadge.module.css */
+
+.techBadge {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(15px);
+  padding: 0.875rem 1.25rem;
+  border-radius: 12px;
+  border: 1px solid rgba(99, 102, 241, 0.1);
+  text-align: center;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 
+    0 4px 15px rgba(99, 102, 241, 0.08),
+    0 0 0 1px rgba(255, 255, 255, 0.4) inset;
+  position: relative;
+  overflow: hidden;
+}
+
+.techBadge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(99, 102, 241, 0.05) 0%, rgba(139, 92, 246, 0.05) 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.techBadge:hover::before {
+  opacity: 1;
+}
+
+.techBadge:hover {
+  transform: translateY(-2px) scale(1.05);
+  background: rgba(255, 255, 255, 0.95);
+  border-color: rgba(99, 102, 241, 0.2);
+  box-shadow: 
+    0 8px 25px rgba(99, 102, 241, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+}
+
+.techName {
+  color: #1e293b;
+  font-size: 0.875rem;
+  font-weight: 600;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  letter-spacing: -0.025em;
+  position: relative;
+  z-index: 1;
+}
+
+@media (max-width: 768px) {
+  .techBadge {
+    padding: 0.75rem 1rem;
+  }
+  
+  .techName {
+    font-size: 0.8125rem;
+  }
+}

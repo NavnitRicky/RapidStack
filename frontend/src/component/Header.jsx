@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Header.css';
 
 const Header = () => {
@@ -6,13 +7,14 @@ const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+  const navigate = useNavigate();
 
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       
       // Update active section based on scroll position
-      const sections = ['hero', 'team', 'projects', 'process', 'contact'];
+      const sections = ['hero', 'projects', 'process', 'contact'];
       const scrollPosition = window.scrollY + 100;
       
       for (let i = sections.length - 1; i >= 0; i--) {
@@ -37,23 +39,47 @@ const Header = () => {
     setActiveSection(sectionId);
   };
 
+  const goToTeamPage = () => {
+    navigate('/team');
+    setIsMobileMenuOpen(false);
+    // Ensure we start at top after route change
+    setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
+  };
+
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
   const navItems = [
-    { id: 'hero', label: 'Home', icon: '🏠' },
-    { id: 'team', label: 'Team', icon: '👥' },
-    { id: 'projects', label: 'Projects', icon: '💼' },
-    { id: 'process', label: 'Process', icon: '⚙️' },
-    { id: 'contact', label: 'Contact', icon: '📞' }
+    { id: 'hero', label: 'Home', icon: '🏠', action: () => {
+      if (window.location.pathname !== '/') navigate('/#hero');
+      else scrollToSection('hero');
+    } },
+    { id: 'projects', label: 'Projects', icon: '💼', action: () => {
+      if (window.location.pathname !== '/') navigate('/#projects');
+      else scrollToSection('projects');
+    } },
+    { id: 'process', label: 'Process', icon: '⚙️', action: () => {
+      if (window.location.pathname !== '/') navigate('/#process');
+      else scrollToSection('process');
+    } },
+    { id: 'contact', label: 'Contact', icon: '📞', action: () => {
+      if (window.location.pathname !== '/') navigate('/#contact');
+      else scrollToSection('contact');
+    } },
+    { id: 'team', label: 'Team', icon: '👥', action: goToTeamPage },
+    { id: 'schedule', label: 'Schedule a Call', icon: '🗓️', action: () => {
+      navigate('/schedule-call');
+      setIsMobileMenuOpen(false);
+      setTimeout(() => window.scrollTo({ top: 0, behavior: 'smooth' }), 0);
+    } }
   ];
 
   return (
     <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
       <div className="header-container">
         <div className="logo">
-          <button onClick={() => scrollToSection('hero')} className="logo-button">
+          <button onClick={() => navigate('/')} className="logo-button">
             <div className="logo-icon">🚀</div>
             <h1>Rapid Stack</h1>
           </button>
@@ -64,7 +90,7 @@ const Header = () => {
             {navItems.map((item) => (
               <li key={item.id} className="nav-item">
                 <button 
-                  onClick={() => scrollToSection(item.id)}
+                  onClick={item.action}
                   className={`nav-link ${activeSection === item.id ? 'active' : ''}`}
                 >
                   <span className="nav-icon">{item.icon}</span>

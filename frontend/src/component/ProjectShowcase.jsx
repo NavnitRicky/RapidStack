@@ -20,7 +20,7 @@ export default function ProjectShowcase() {
       id: 2,
       title: "Educational platform ",
       category: "Full stack Development",
-      description: "Innovience empowers students with industry-ready internships and exciting hackathons to build skills and showcase talent.",
+      description: "RapidStack empowers students with industry-ready internships and exciting hackathons to build skills and showcase talent.",
       technologies: ["Next.js", "React", "Supabase", "Payment integration"],
       // image: "https://readdy.ai/api/search-image?query=Mobile%20project%20management%20app%20interface%20on%20smartphone%2C%20task%20management%20screens%20with%20clean%20UI%2C%20collaborative%20workspace%20design%2C%20modern%20mobile%20app%20with%20purple%20and%20white%20theme&width=600&height=400&seq=mobile1&orientation=landscape",
       image: "/images/innovience.jpg",
@@ -102,10 +102,10 @@ export default function ProjectShowcase() {
                 </div>
                 {/* Example: Add a View Website button for the first project only. Replace with your real URLs as needed. */}
                 {project.id === 1 && (
-                  <button className="btn primary" style={{marginTop: '1rem'}} onClick={() => setModalUrl('https://padhaixpress.in')}>View Website</button>
+                  <button className="btn primary" style={{ marginTop: '1rem' }} onClick={() => setModalUrl('https://padhaixpress.in')}>View Website</button>
                 )}
-                 {project.id === 2 && (
-                  <button className="btn primary" style={{marginTop: '1rem'}} onClick={() => setModalUrl('https://innovience.in')}>View Website</button>
+                {project.id === 2 && (
+                  <button className="btn primary" style={{ marginTop: '1rem' }} onClick={() => setModalUrl('https://innovience.in')}>View Website</button>
                 )}
               </div>
             </div>

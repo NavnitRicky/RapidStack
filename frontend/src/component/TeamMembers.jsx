@@ -2,19 +2,10 @@ import './TeamMember.css';
 
 export default function TeamMembers() {
   const teamMembers = [
+  
     {
       id: 1,
-      name: "Rohit kumar singh",
-      role: "Backend Developer",
-      skills: ["Node.js", "Express", "MongoDB", "PostgreSQL", "GraphQL"],
-
-      experience: "3+ years",
-      image: "images/rohit.jpg",
-      description: "Building robust, scalable server architectures. Expert in API design, database optimization, and system performance."
-    },
-    {
-      id: 2,
-      name: "Navnit kumar",
+      name: "Navnit kumar (Team Lead)",
       role: "Frontend Developer",
       skills: ["React", "Next.js", "Tailwind CSS", "TypeScript", "UI/UX"],
 
@@ -23,14 +14,15 @@ export default function TeamMembers() {
       description: "Crafting beautiful, responsive interfaces that users love. Specialized in modern React ecosystems and pixel-perfect implementations."
 
     },
-    {
-      id: 3,
-      name: "Sayani Datta",
-      role: "Mobile App Developer", 
-      skills: ["Flutter", "Firebase", "Dart", "iOS", "Android"],
-      experience: "2+ years",
-      image: "images/sayani.jpg",
-      description: "Creating seamless cross-platform mobile experiences. Focused on performance optimization and native-feel applications."
+      {
+      id: 2,
+      name: "Rohit kumar singh",
+      role: "Backend Developer",
+      skills: ["Node.js", "Express", "MongoDB", "PostgreSQL", "GraphQL"],
+
+      experience: "3+ years",
+      image: "images/rohit.jpg",
+      description: "Building robust, scalable server architectures. Expert in API design, database optimization, and system performance."
     },
     {
       id: 4,
